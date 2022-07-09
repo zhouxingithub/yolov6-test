@@ -26,7 +26,7 @@ class Predictor(BaseEngine):
 
 if __name__ == '__main__':
     pred = Predictor(engine_path='yolov6.trt')
-    img_path = '../src/3.jpg'
+    img_path = './1.jpg'
     origin_img = pred.inference(img_path)
     cv2.imwrite("%s_yolov6.jpg" % os.path.splitext(
         os.path.split(img_path)[-1])[0], origin_img)
